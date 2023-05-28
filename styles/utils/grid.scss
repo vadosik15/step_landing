@@ -1,0 +1,20 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 189px);
+  grid-gap: 24px;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: start;
+
+  &__item {
+    @for $start from 1 through 4 {
+      @for $end from $start through 4 {
+        &-tablet--#{$start}-#{$end} {
+            grid-column: #{$start} / #{$end + 1};
+        }
+      }
+    }
+  }
+}

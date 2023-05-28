@@ -1,0 +1,20 @@
+@import './utils/variabels.scss';
+@import './utils/grid.scss';
+@import './utils/mixixns.scss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700&family=Montserrat:wght@800&display=swap');
+@import './blocks/HeaderBlock.scss';
+@import './blocks/MainDropBoxes.scss';
+@import './blocks/MainTeam.scss';
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  background-color: $background-black;
+  overflow: hidden;
+}

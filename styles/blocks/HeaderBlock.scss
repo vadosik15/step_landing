@@ -1,0 +1,177 @@
+@import '../utils/mixixns.scss'; 
+
+.container {
+  background-image: url(./images/Union.png);
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100vh;
+  justify-content: flex-end;
+  position: relative;
+
+  @include onBigMonitor {
+    align-items: center;
+
+  }
+  @include onLittlePhone {
+    height: 120vh;
+  }
+
+  &__paralaxer-swap {
+    display: none;
+
+    & img {
+      width: 100%;
+      min-width: 800px;
+    }
+
+    @include onBigMonitor {
+      display: block;
+
+    }
+  }
+
+  @include onBigMonitor {
+    flex-direction: column;
+  }
+
+  &__text {
+    max-width: 680px;
+    position: absolute;
+    z-index: 100000;
+    left: 20px;
+
+    @include onBigMonitor {
+      top: 0;
+      left: auto;
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include onTablet {
+      margin-top: 115px;
+    }
+
+    &-namesection {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 64px;
+      line-height: 77px;
+      color: $white-color;
+      margin-top: 296px;
+
+      @include onBigMonitor {
+        margin-top: 0;
+        text-align: center;
+      }
+
+      @include onTablet {
+        font-size: 42px;
+        line-height: 55px;
+      }
+    }
+
+    &-motivation {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      margin-top: 24px;
+      font-size: 20px;
+      line-height: 29px;
+      color: $grey-color;
+
+      @include onTablet {
+        font-size: 15px;
+        line-height: 12px;
+      }
+    }
+
+    &-btn {
+      margin-top: 48px;
+      background-color: $purpl-color;
+      border: 1px solid $purpl-color;
+      width: 240px;
+      height: 54px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: $white-color;
+      transition: 0.5s;
+
+      &:hover {
+        background-color: $white-color;
+        color: $purpl-color;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__paralaxer {
+    width: 700px;
+    margin-top: 86px;
+    height: 700px;
+    position: relative;
+
+    @include onBigMonitor {
+      display: none;
+    }
+
+    &--image {
+      position: absolute;
+
+      &.men {
+        z-index: 3;
+      }
+
+      &.FigmaIcon {
+        width: 100px;
+        height: 102px;
+        top: 72px;
+        right: 153px;
+        z-index: 2;
+      }
+
+      &.pensileDesk {
+        width: 109px;
+        height: 117px;
+        z-index: 3;
+        top: 118px;
+        left: 148px;
+      }
+
+      &.PhotoshopIcon {
+        bottom: 105px;
+        width: 150px;
+        height: 150px;
+        right: 285px;
+        z-index: 3;
+      }
+
+      &.Points {
+        z-index: 3;
+        right: 12px;
+        bottom: 169px;
+        width: 111px;
+        height: 108px;
+      }
+
+      &.cloud {
+        z-index: 1;
+        top: -211px;
+        left: -312px;
+        width: 193%;
+        height: 1214px;
+      }
+    }
+  }
+}
